@@ -6,6 +6,8 @@ package interfaz;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
+import interfaz.views.Principal;
+import java.awt.BorderLayout;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -23,6 +25,7 @@ public class Dash extends javax.swing.JFrame {
     public Dash() {
         initComponents();
         SetDate();
+        InitContent();
     }
 
     private void SetDate() {
@@ -43,7 +46,17 @@ public class Dash extends javax.swing.JFrame {
     // Crear el texto con la fecha y la hora
     dateText.setText("Hoy es " + dia + " de " + meses[month - 1] + " de " + year + " y son las " + formattedTime + " horas.");
 }
-
+    
+    private void InitContent(){
+        Principal p1 = new Principal();
+        p1.setSize(750, 430);
+        p1.setLocation(0,0);
+        
+        content.removeAll();
+        content.add(p1, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
