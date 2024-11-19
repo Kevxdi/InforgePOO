@@ -6,22 +6,18 @@ package interfaz;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
-import interfaz.views.Principal;
+import interfaz.views.*;
 import java.awt.BorderLayout;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import javax.swing.JPanel;
 import javax.swing.UIManager;
 
-/**
- *
- * @author kevvr
- */
+
 public class Dash extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Dash
-     */
+
     public Dash() {
         initComponents();
         SetDate();
@@ -29,34 +25,39 @@ public class Dash extends javax.swing.JFrame {
     }
 
     private void SetDate() {
-        //a
-    LocalDate now = LocalDate.now();
-    LocalTime time = LocalTime.now();
-    int year = now.getYear();
-    int dia = now.getDayOfMonth();
-    int month = now.getMonthValue();
-    String[] meses = {
-        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
-    };
-    
-    // Formatear la hora en formato de 24 horas (HH:mm)
-    DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
-    String formattedTime = time.format(timeFormatter);
+      
+        LocalDate now = LocalDate.now();
+        LocalTime time = LocalTime.now();
+        int year = now.getYear();
+        int dia = now.getDayOfMonth();
+        int month = now.getMonthValue();
+        String[] meses = {
+            "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+        };
 
-    // Crear el texto con la fecha y la hora
-    dateText.setText("Hoy es " + dia + " de " + meses[month - 1] + " de " + year + " y son las " + formattedTime + " horas.");
-}
-    
-    private void InitContent(){
-        Principal p1 = new Principal();
-        p1.setSize(750, 430);
-        p1.setLocation(0,0);
-        
+        // Formatear la hora en formato de 24 horas 
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+        String formattedTime = time.format(timeFormatter);
+
+        // Asiganacion del texto en el label3
+        dateText.setText("Hoy es " + dia + " de " + meses[month - 1] + " de " + year + " y son las " + formattedTime + " horas.");
+    }
+
+    private void ShowJPanel(JPanel p) {
+
+        p.setSize(750, 430);
+        p.setLocation(0, 0);
+
         content.removeAll();
-        content.add(p1, BorderLayout.CENTER);
+        content.add(p, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
     }
+
+    private void InitContent() {
+        ShowJPanel(new Principal());
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -81,7 +82,7 @@ public class Dash extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        background.setBackground(new java.awt.Color(255, 255, 255));
+        background.setBackground(new java.awt.Color(240, 255, 240));
 
         menu.setBackground(new java.awt.Color(0, 102, 51));
 
@@ -186,7 +187,7 @@ public class Dash extends javax.swing.JFrame {
         dateText.setForeground(new java.awt.Color(0, 0, 0));
         dateText.setText("jLabel3");
 
-        content.setBackground(new java.awt.Color(255, 255, 255));
+        content.setBackground(new java.awt.Color(240, 255, 240));
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
         content.setLayout(contentLayout);
@@ -272,15 +273,17 @@ public class Dash extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void principalbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_principalbtActionPerformed
-        // TODO add your handling code here:
+
+       ShowJPanel(new Principal());
+         
     }//GEN-LAST:event_principalbtActionPerformed
 
     private void buscararchivosbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscararchivosbtActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_buscararchivosbtActionPerformed
 
     private void subirarchivosbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subirarchivosbtActionPerformed
-        // TODO add your handling code here:
+        ShowJPanel(new Registro());
     }//GEN-LAST:event_subirarchivosbtActionPerformed
 
     /**
