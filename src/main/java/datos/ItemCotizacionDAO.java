@@ -12,6 +12,7 @@ public class ItemCotizacionDAO implements CrudSimpleInterface<ItemCotizacion> {
 
     public ItemCotizacionDAO(Connection connection) {
         this.connection = connection;
+//sadfgh
     }
 
     // Método para agregar un ItemCotizacion (equivalente a insertar)
