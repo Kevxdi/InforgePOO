@@ -26,6 +26,7 @@ public class Dash extends javax.swing.JFrame {
     }
 
     private void SetDate() {
+        //a
     LocalDate now = LocalDate.now();
     LocalTime time = LocalTime.now();
     int year = now.getYear();
