@@ -60,8 +60,8 @@ public class ProyectoDAO implements CrudSimpleInterface<Proyecto> {
         resp = false;
         try {
             ps = CON.conectar().prepareStatement(
-                    "INSERT INTO proyecto (nombre, descripcion, fecha_inicio, fecha_fin, usuario_id, especificaciones, plano, activo) "
-                    + "VALUES (?, ?, ?, ?, ?, ?, ?, 1)"
+                    "INSERT INTO proyecto (nombre, descripcion, fecha_inicio, fecha_fn, usuario_id, especificaciones, plano) "
+                    + "VALUES (?, ?, ?, ?, ?, ?, ?)"
             );
             ps.setString(1, obj.getNombre());
             ps.setString(2, obj.getDescripcion());
@@ -70,7 +70,6 @@ public class ProyectoDAO implements CrudSimpleInterface<Proyecto> {
             ps.setInt(5, obj.getUsuarioId());
             ps.setString(6, obj.getEspecificaciones());
             ps.setBytes(7, obj.getPlano());
-            ps.setInt(8, obj.getId());
 
             if (ps.executeUpdate() > 0) {
                 resp = true;
@@ -78,8 +77,10 @@ public class ProyectoDAO implements CrudSimpleInterface<Proyecto> {
 
             ps.close();
         } catch (SQLException e) {
+            System.out.println("datos.ProyectoDAO.insertar()"+ e);
             JOptionPane.showMessageDialog(null, e.getMessage());
         } finally {
+            JOptionPane.showMessageDialog(null,"Archivo subido correctamente");
             ps = null;
             CON.desconectar();
         }

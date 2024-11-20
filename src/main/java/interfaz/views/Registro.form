@@ -41,8 +41,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="catTxt" alignment="0" max="32767" attributes="0"/>
-                              <Component id="authorTxt" alignment="0" max="32767" attributes="0"/>
+                              <Component id="inputText_FechaFin" alignment="0" max="32767" attributes="0"/>
+                              <Component id="inputText_Fechainicio" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="authorLbl" pref="73" max="32767" attributes="0"/>
                                   <EmptySpace min="233" pref="233" max="-2" attributes="0"/>
@@ -55,23 +55,23 @@
                                   <Component id="titleLbl" max="32767" attributes="0"/>
                                   <EmptySpace min="234" pref="234" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="titleTxt" alignment="0" max="32767" attributes="0"/>
+                              <Component id="inputText_nombre" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="dateLbl" max="32767" attributes="0"/>
                                   <EmptySpace min="161" pref="161" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="dateTxt" alignment="0" max="32767" attributes="0"/>
+                              <Component id="inputText_Descripcion" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                           <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="langTxt" alignment="0" max="32767" attributes="0"/>
+                              <Component id="inputText_Usuario" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="langLbl" max="32767" attributes="0"/>
                                   <EmptySpace min="228" pref="228" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="pagsTxt" alignment="0" max="32767" attributes="0"/>
+                              <Component id="inputText_Especificaciones" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="pagsLbl" max="32767" attributes="0"/>
                                   <EmptySpace min="223" pref="223" max="-2" attributes="0"/>
@@ -81,12 +81,7 @@
                                   <Component id="descLbl" max="32767" attributes="0"/>
                                   <EmptySpace min="206" pref="206" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="descTxt" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="stockLbl" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="260" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="stockTxt" alignment="0" max="32767" attributes="0"/>
+                              <Component id="inputText_Plano" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                       </Group>
@@ -109,39 +104,35 @@
                           <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           <Component id="langLbl" max="32767" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="langTxt" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="inputText_Usuario" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                           <Component id="pagsLbl" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="pagsTxt" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="inputText_Especificaciones" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Component id="descLbl" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="descTxt" min="-2" pref="30" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                          <Component id="stockLbl" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="stockTxt" min="-2" pref="30" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="inputText_Plano" min="-2" pref="30" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
                           <Component id="button" min="-2" pref="50" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="titleLbl" max="32767" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="titleTxt" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="inputText_nombre" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Component id="dateLbl" max="32767" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="dateTxt" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="inputText_Descripcion" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Component id="authorLbl" max="32767" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="authorTxt" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="inputText_Fechainicio" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                           <Component id="catLbl" max="32767" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="catTxt" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="inputText_FechaFin" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -155,9 +146,6 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto" size="12" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Subir nuevo proyecto"/>
           </Properties>
@@ -173,15 +161,7 @@
             <Property name="text" type="java.lang.String" value="Nombre"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="titleTxt">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="inputText_nombre">
         </Component>
         <Component class="javax.swing.JLabel" name="dateLbl">
           <Properties>
@@ -194,15 +174,7 @@
             <Property name="text" type="java.lang.String" value="Descripci&#xf3;n"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="dateTxt">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="inputText_Descripcion">
         </Component>
         <Component class="javax.swing.JLabel" name="authorLbl">
           <Properties>
@@ -215,15 +187,7 @@
             <Property name="text" type="java.lang.String" value="Fecha Inicio"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="authorTxt">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="inputText_Fechainicio">
         </Component>
         <Component class="javax.swing.JLabel" name="catLbl">
           <Properties>
@@ -236,15 +200,10 @@
             <Property name="text" type="java.lang.String" value="Fecha Fin"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="catTxt">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="inputText_FechaFin">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inputText_FechaFinActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator1">
           <Properties>
@@ -268,14 +227,8 @@
             <Property name="text" type="java.lang.String" value="Usuario"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="langTxt">
+        <Component class="javax.swing.JTextField" name="inputText_Usuario">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
@@ -290,14 +243,8 @@
             <Property name="text" type="java.lang.String" value="Especificaciones"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="pagsTxt">
+        <Component class="javax.swing.JTextField" name="inputText_Especificaciones">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
@@ -312,37 +259,8 @@
             <Property name="text" type="java.lang.String" value="Plano"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="descTxt">
+        <Component class="javax.swing.JTextField" name="inputText_Plano">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="stockLbl">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Roboto Black" size="12" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="33" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="id"/>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="stockTxt">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>

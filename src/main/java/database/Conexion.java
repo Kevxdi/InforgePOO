@@ -25,6 +25,7 @@ public class Conexion {
             Class.forName(DRIVER);
             this.cadena = DriverManager.getConnection(URL + DB, USER, PASSWORD);
         } catch (ClassNotFoundException | SQLException e) {
+             e.printStackTrace(); 
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
         return this.cadena;

@@ -180,11 +180,9 @@ public class Dash extends javax.swing.JFrame {
         header.setBackground(new java.awt.Color(192, 192, 192));
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Gestor de Informacion de proyectos y especificaciones.");
 
         dateText.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        dateText.setForeground(new java.awt.Color(0, 0, 0));
         dateText.setText("jLabel3");
 
         content.setBackground(new java.awt.Color(240, 255, 240));
@@ -228,7 +226,6 @@ public class Dash extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("TALLERES LGR");
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);

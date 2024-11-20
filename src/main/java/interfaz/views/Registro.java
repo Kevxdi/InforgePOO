@@ -4,6 +4,10 @@
  */
 package interfaz.views;
 
+import datos.*;
+import datos.ProyectoDAO;
+import entidades.*;
+
 /**
  *
  * @author kevvr
@@ -29,57 +33,48 @@ public class Registro extends javax.swing.JPanel {
         bg = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
         titleLbl = new javax.swing.JLabel();
-        titleTxt = new javax.swing.JTextField();
+        inputText_nombre = new javax.swing.JTextField();
         dateLbl = new javax.swing.JLabel();
-        dateTxt = new javax.swing.JTextField();
+        inputText_Descripcion = new javax.swing.JTextField();
         authorLbl = new javax.swing.JLabel();
-        authorTxt = new javax.swing.JTextField();
+        inputText_Fechainicio = new javax.swing.JTextField();
         catLbl = new javax.swing.JLabel();
-        catTxt = new javax.swing.JTextField();
+        inputText_FechaFin = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         langLbl = new javax.swing.JLabel();
-        langTxt = new javax.swing.JTextField();
+        inputText_Usuario = new javax.swing.JTextField();
         pagsLbl = new javax.swing.JLabel();
-        pagsTxt = new javax.swing.JTextField();
+        inputText_Especificaciones = new javax.swing.JTextField();
         descLbl = new javax.swing.JLabel();
-        descTxt = new javax.swing.JTextField();
-        stockLbl = new javax.swing.JLabel();
-        stockTxt = new javax.swing.JTextField();
+        inputText_Plano = new javax.swing.JTextField();
         button = new javax.swing.JButton();
 
         bg.setBackground(new java.awt.Color(240, 255, 240));
 
         title.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
-        title.setForeground(new java.awt.Color(0, 0, 0));
         title.setText("Subir nuevo proyecto");
 
         titleLbl.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
         titleLbl.setForeground(new java.awt.Color(51, 51, 51));
         titleLbl.setText("Nombre");
 
-        titleTxt.setBackground(new java.awt.Color(255, 255, 255));
-        titleTxt.setForeground(new java.awt.Color(0, 0, 0));
-
         dateLbl.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
         dateLbl.setForeground(new java.awt.Color(51, 51, 51));
         dateLbl.setText("Descripción");
-
-        dateTxt.setBackground(new java.awt.Color(255, 255, 255));
-        dateTxt.setForeground(new java.awt.Color(0, 0, 0));
 
         authorLbl.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
         authorLbl.setForeground(new java.awt.Color(51, 51, 51));
         authorLbl.setText("Fecha Inicio");
 
-        authorTxt.setBackground(new java.awt.Color(255, 255, 255));
-        authorTxt.setForeground(new java.awt.Color(0, 0, 0));
-
         catLbl.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
         catLbl.setForeground(new java.awt.Color(51, 51, 51));
         catLbl.setText("Fecha Fin");
 
-        catTxt.setBackground(new java.awt.Color(255, 255, 255));
-        catTxt.setForeground(new java.awt.Color(0, 0, 0));
+        inputText_FechaFin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputText_FechaFinActionPerformed(evt);
+            }
+        });
 
         jSeparator1.setForeground(new java.awt.Color(204, 204, 204));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -89,34 +84,19 @@ public class Registro extends javax.swing.JPanel {
         langLbl.setForeground(new java.awt.Color(51, 51, 51));
         langLbl.setText("Usuario");
 
-        langTxt.setBackground(new java.awt.Color(255, 255, 255));
-        langTxt.setForeground(new java.awt.Color(0, 0, 0));
-        langTxt.setToolTipText("");
+        inputText_Usuario.setToolTipText("");
 
         pagsLbl.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
         pagsLbl.setForeground(new java.awt.Color(51, 51, 51));
         pagsLbl.setText("Especificaciones");
 
-        pagsTxt.setBackground(new java.awt.Color(255, 255, 255));
-        pagsTxt.setForeground(new java.awt.Color(0, 0, 0));
-        pagsTxt.setToolTipText("");
+        inputText_Especificaciones.setToolTipText("");
 
         descLbl.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
         descLbl.setForeground(new java.awt.Color(51, 51, 51));
         descLbl.setText("Plano");
 
-        descTxt.setBackground(new java.awt.Color(255, 255, 255));
-        descTxt.setForeground(new java.awt.Color(0, 0, 0));
-        descTxt.setToolTipText("");
-
-        stockLbl.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
-        stockLbl.setForeground(new java.awt.Color(51, 51, 51));
-        stockLbl.setText("id");
-        stockLbl.setToolTipText("");
-
-        stockTxt.setBackground(new java.awt.Color(255, 255, 255));
-        stockTxt.setForeground(new java.awt.Color(0, 0, 0));
-        stockTxt.setToolTipText("");
+        inputText_Plano.setToolTipText("");
 
         button.setBackground(new java.awt.Color(18, 90, 173));
         button.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -139,8 +119,8 @@ public class Registro extends javax.swing.JPanel {
                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bgLayout.createSequentialGroup()
                         .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(catTxt)
-                            .addComponent(authorTxt)
+                            .addComponent(inputText_FechaFin)
+                            .addComponent(inputText_Fechainicio)
                             .addGroup(bgLayout.createSequentialGroup()
                                 .addComponent(authorLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
                                 .addGap(233, 233, 233))
@@ -150,20 +130,20 @@ public class Registro extends javax.swing.JPanel {
                             .addGroup(bgLayout.createSequentialGroup()
                                 .addComponent(titleLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(234, 234, 234))
-                            .addComponent(titleTxt)
+                            .addComponent(inputText_nombre)
                             .addGroup(bgLayout.createSequentialGroup()
                                 .addComponent(dateLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(161, 161, 161))
-                            .addComponent(dateTxt))
+                            .addComponent(inputText_Descripcion))
                         .addGap(68, 68, 68)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(70, 70, 70)
                         .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(langTxt)
+                            .addComponent(inputText_Usuario)
                             .addGroup(bgLayout.createSequentialGroup()
                                 .addComponent(langLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(228, 228, 228))
-                            .addComponent(pagsTxt)
+                            .addComponent(inputText_Especificaciones)
                             .addGroup(bgLayout.createSequentialGroup()
                                 .addComponent(pagsLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(223, 223, 223))
@@ -171,11 +151,7 @@ public class Registro extends javax.swing.JPanel {
                             .addGroup(bgLayout.createSequentialGroup()
                                 .addComponent(descLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(206, 206, 206))
-                            .addComponent(descTxt)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
-                                .addComponent(stockLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(260, 260, 260))
-                            .addComponent(stockTxt))
+                            .addComponent(inputText_Plano))
                         .addGap(72, 72, 72))
                     .addGroup(bgLayout.createSequentialGroup()
                         .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -192,38 +168,34 @@ public class Registro extends javax.swing.JPanel {
                         .addGap(6, 6, 6)
                         .addComponent(langLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(langTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputText_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(16, 16, 16)
                         .addComponent(pagsLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pagsTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputText_Especificaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(descLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(descTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21)
-                        .addComponent(stockLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(stockTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24)
+                        .addComponent(inputText_Plano, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(97, 97, 97)
                         .addComponent(button, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(bgLayout.createSequentialGroup()
                         .addComponent(titleLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(titleTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputText_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(dateLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dateTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputText_Descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(authorLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(authorTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputText_Fechainicio, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(11, 11, 11)
                         .addComponent(catLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(catTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputText_FechaFin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(70, 70, 70)))
                 .addGap(22, 22, 22))
         );
@@ -241,30 +213,54 @@ public class Registro extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonActionPerformed
-       
+        Proyecto datosFormulario = new Proyecto();
+        String nombre = inputText_nombre.getText();
+        String descripcion = inputText_Descripcion.getText();
+        String especificaciones = inputText_Especificaciones.getText();
+        String fechaInicio = inputText_Fechainicio.getText();
+        String fechaFin = inputText_FechaFin.getText();
+        String plano = inputText_Plano.getText();
+        String usuario = inputText_Usuario.getText();
+        
+        
+        
+        datosFormulario.setNombre(nombre);
+        datosFormulario.setDescripcion(descripcion);
+        datosFormulario.setEspecificaciones(especificaciones);
+        datosFormulario.setFechaInicio(fechaInicio);
+        datosFormulario.setFechaFin(fechaFin);
+        datosFormulario.setPlano(null);
+        datosFormulario.setUsuarioId(Integer.parseInt(usuario));
+        
+        
+        datos.ProyectoDAO proyectoDAO = new datos.ProyectoDAO();
+        proyectoDAO.insertar(datosFormulario);
+
     }//GEN-LAST:event_buttonActionPerformed
+
+    private void inputText_FechaFinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputText_FechaFinActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputText_FechaFinActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel authorLbl;
-    private javax.swing.JTextField authorTxt;
     private javax.swing.JPanel bg;
     private javax.swing.JButton button;
     private javax.swing.JLabel catLbl;
-    private javax.swing.JTextField catTxt;
     private javax.swing.JLabel dateLbl;
-    private javax.swing.JTextField dateTxt;
     private javax.swing.JLabel descLbl;
-    private javax.swing.JTextField descTxt;
+    private javax.swing.JTextField inputText_Descripcion;
+    private javax.swing.JTextField inputText_Especificaciones;
+    private javax.swing.JTextField inputText_FechaFin;
+    private javax.swing.JTextField inputText_Fechainicio;
+    private javax.swing.JTextField inputText_Plano;
+    private javax.swing.JTextField inputText_Usuario;
+    private javax.swing.JTextField inputText_nombre;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel langLbl;
-    private javax.swing.JTextField langTxt;
     private javax.swing.JLabel pagsLbl;
-    private javax.swing.JTextField pagsTxt;
-    private javax.swing.JLabel stockLbl;
-    private javax.swing.JTextField stockTxt;
     private javax.swing.JLabel title;
     private javax.swing.JLabel titleLbl;
-    private javax.swing.JTextField titleTxt;
     // End of variables declaration//GEN-END:variables
 }

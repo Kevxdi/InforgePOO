@@ -27,5 +27,10 @@
             <artifactId>AbsoluteLayout</artifactId>
             <version>RELEASE190</version>
         </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version> <!-- Cambia la versión según la más reciente disponible -->
+        </dependency>
     </dependencies>
 </project>
